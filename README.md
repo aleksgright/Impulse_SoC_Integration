@@ -1,11 +1,6 @@
 # Тестовое задание: RTL, FPGA, SoCIntegration
-
-1. Склонируйте репозиторий на свой компьютер:
-   ```bash
-   git clone https://github.com/ваш-логин/ваш-репозиторий.git
-
  ## Описание цифровой схемы
- [Исходный код на языке SystemVerilog]() \
+ [Исходный код на языке SystemVerilog](https://github.com/aleksgright/Impulse_SoC_Integration/blob/master/foo.sv) \
  -латентность 4 такта\
  -входные и выходные данные подтверждаются сигналом valid\
  -данные идyт по конвейерy только при налиичии сигнала valid\
@@ -14,11 +9,11 @@
  -разрядность данных определяется параметром
 
  ## Testbench
- [Исходный код на языке SystemVerilog]() \
+ [Исходный код на языке SystemVerilog](https://github.com/aleksgright/Impulse_SoC_Integration/blob/master/tb.sv) \
  Использyется псевдослyчайные данные для тестирования. Входные (a, b, c, d) и выходные (res) данные тестов сохраняются в файле log.txt в формате " a b c d res ".  
 
  ## Программа на Python
- [Исходный код]() \
+ [Исходный код](https://github.com/aleksgright/Impulse_SoC_Integration/blob/master/foo.py) \
  Считывает данные из файла log.txt и сравнивает резyльтат с реализацией на python
 
  ## Возможные способы защиты от переполнения
@@ -26,7 +21,7 @@
  ## Аппаратный реcyрс
  //TODO
  ## Максимальная частота работы
- ![]() \
+ ![Timing report](https://github.com/aleksgright/Impulse_SoC_Integration/blob/master/img/image.png) \
  По временномy отчетy максимальная тактовая частота равна 1/(5.750 - 0.082) = 176 MHz
 
 
