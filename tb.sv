@@ -30,17 +30,17 @@ module testbench;
     //---------------------------------
 
     foo #(.width(WIDTH)) DUT (
-        .clk      ( clk       ),
-        .rst  ( rst   ),
+        .clk     (     clk),
+        .rst     (     rst),
 
-        .arg_vld ( arg_vld  ),
-        .a_in ( a_in  ),
-        .b_in  ( b_in   ),
-        .c_in    ( c_in     ),
-        .d_in  ( d_in   ),
+        .arg_vld ( arg_vld),
+        .a_in    (    a_in),
+        .b_in    (    b_in),
+        .c_in    (    c_in),
+        .d_in    (    d_in),
 
-        .res ( res  ),
-        .res_vld ( res_vld  )
+        .res     (     res),
+        .res_vld ( res_vld)
     );
 
 
@@ -259,8 +259,8 @@ module testbench;
         int timeout_cycles   = 100000 
     );
         fork
-            in    (gen_pkt_amount, gen_data_min, gen_data_max, gen_delay_min, gen_delay_max);
-            out       ();
+            in           (gen_pkt_amount, gen_data_min, gen_data_max, gen_delay_min, gen_delay_max);
+            out          ();
             error_checker(gen_pkt_amount);
             timeout      (timeout_cycles);
         join
@@ -272,11 +272,11 @@ module testbench;
         join_none
         test(
             .gen_pkt_amount (    10000),
-            .gen_data_min   (    0),
+            .gen_data_min   (        0),
             .gen_data_max   (    10000),
-            .gen_delay_min  (     0),
-            .gen_delay_max  (     5),
-            .timeout_cycles (10000000)
+            .gen_delay_min  (        0),
+            .gen_delay_max  (        3),
+            .timeout_cycles (  1000000)
         );
     end
 

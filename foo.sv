@@ -3,14 +3,14 @@ module foo # (parameter width = 32)
     input clk,
     input rst,
 
-    input signed [width-1:0] a_in,
-    input signed [width-1:0] b_in,
-    input signed [width-1:0] c_in,
-    input signed [width-1:0] d_in,
-    input             arg_vld,
+    input signed        [width-1:0] a_in,
+    input signed        [width-1:0] b_in,
+    input signed        [width-1:0] c_in,
+    input signed        [width-1:0] d_in,
+    input                           arg_vld,
 
     output logic signed [width-1:0] res,
-    output logic             res_vld 
+    output logic                    res_vld 
  );
  
     localparam depth = 4;
@@ -41,11 +41,7 @@ module foo # (parameter width = 32)
     end
         
     always_comb begin
-        mul = $signed(reg_arg1) * $signed(reg_arg2);
-    end
-    
-    always_comb begin
-        diff = mul_reg - tmp_reg;
+        mul = reg_arg1 * reg_arg2;
     end
 
     always_ff @(posedge clk)
@@ -79,8 +75,9 @@ module foo # (parameter width = 32)
 
     always_ff @(posedge clk)
         if (vld[2])
-            pre_res <= diff>>>1;
+            pre_res <= (mul_reg - tmp_reg)>>>1;
  
     assign res = pre_res[width-1] ? pre_res + 1 : pre_res;
-    
+
+ 
 endmodule
