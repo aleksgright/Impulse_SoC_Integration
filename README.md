@@ -1,6 +1,6 @@
 # Тестовое задание: RTL, FPGA, SoCIntegration
  ## Цифровая схема
- ![](https://github.com/aleksgright/Impulse_SoC_Integration/blob/master/img/Timing_report.png)
+ ![](https://github.com/aleksgright/Impulse_SoC_Integration/blob/master/img/Scheme.png)
  ## Описание цифровой схемы
  [Исходный код на языке SystemVerilog](https://github.com/aleksgright/Impulse_SoC_Integration/blob/master/foo.sv) \
  -латентность 4 такта\
@@ -20,7 +20,7 @@
 
  ## Возможные способы защиты от переполнения
  Возможные способы защиты от переполнения - использовавние флага переполнения или использование более широкой разрядной сетки.
- 
+
  ## Максимальная частота работы
  ![Timing report](https://github.com/aleksgright/Impulse_SoC_Integration/blob/master/img/Timing_report.png) \
  По временномy отчетy максимальная тактовая частота равна 1/(5.750 - 0.082) = 176 MHz
